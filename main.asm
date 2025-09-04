@@ -1,42 +1,42 @@
 .model small
 .stack 100h
 .data          
-    msg1 db 'Ce zodie esti?',0 
-    msg2 db 'Previziunea ta pentru saptamana asta este:',0 
-    z_ber db 'Vei fi calcat(a) de tren.',0
-    z_tau db 'Hmmm.. Un moment sa ma uit in astre. Aoleu.. Mi-e rusine sa zic ce am vazut.',0
-    z_gem db 'O sa ti se rupa o unghie si o sa doara foarte tare.',0   
-    z_rac db 'O baba caruia i-ai cedat locul in autobuz iti va lasa mostenire toata averea ei.',0
-    z_fec db 'Absolut toate problemele ti se vor rezolva in curand. Pentru totdeauna.',0 
-    z_bal db 'Hmmm, astrele imi spun ca... Ar trebui sa te speli mai des pe dinti.',0   
-    z_sco db 'Vei castiga 10.000 de lei.',0   
-    z_sag db 'Un eveniment neasteptat va aparea in viata ta... O sa pici toate examenele.',0
-    z_cap db 'Vei gasi un portofel cu 500 de lei (moldovenesti) pe jos.',0
-    z_var db 'Nu vorbesc cu varsatorii, kys.',0
-    z_pes db 'Nu se va schimba nimic in viata ta. Iti vei petrece zilele in singuratate si agonie ca intotdeauna.',0          
-    ber db 'berbec',0
-    berlen equ 6
-    tau db 'taur',0  
-    taulen equ 4
-    gem db 'gemeni',0
+    msg1 db 'What is your zodiac sign?', 0 
+    msg2 db 'Your horoscope for this week is:', 0 
+    z_ari db 'You will face unexpected challenges but overcome them with determination.', 0
+    z_tau db 'Financial opportunities are coming your way; stay alert.', 0
+    z_gem db 'Communication will play a key role in your success this week.', 0   
+    z_can db 'A long-awaited opportunity will finally present itself.', 0
+    z_vir db 'Your hard work will soon be recognized by those around you.', 0 
+    z_lib db 'Balance is key, focus on harmony in both work and relationships.', 0   
+    z_sco db 'Mysteries will unravel, bringing clarity to confusing situations.', 0   
+    z_sag db 'Adventure calls you to embrace new experiences with an open heart.', 0
+    z_cap db 'Persistence will lead to significant progress in your goals.', 0
+    z_aqu db 'Innovation and creativity will set you apart from the crowd.', 0
+    z_pis db 'Emotional healing begins, and you allow yourself to move forward.', 0          
+    ari db 'aries', 0
+    arilen equ 5
+    tau db 'taurus', 0  
+    taulen equ 6
+    gem db 'gemini', 0
     gemlen equ 6
-    rac db 'rac',0  
-    raclen equ 3
-    fec db 'fecioara',0
-    feclen equ 8
-    bal db 'balanta',0  
-    ballen equ 7
-    sco db 'scorpion',0
-    scolen equ 8
-    sag db 'sagetator',0  
-    saglen equ 9   
-    cap db 'capricorn',0  
+    can db 'cancer', 0  
+    canlen equ 6
+    vir db 'virgo', 0
+    virlen equ 5
+    lib db 'libra', 0  
+    liblen equ 5
+    sco db 'scorpio', 0
+    scolen equ 7
+    sag db 'sagittarius', 0  
+    saglen equ 11   
+    cap db 'capricorn', 0  
     caplen equ 9
-    var db 'varsator',0  
-    varlen equ 8
-    pes db 'pesti',0  
-    peslen equ 5
-    invalzod db 'Umm.. Nu exista zodia asta.',0 
+    aqu db 'aquarius', 0  
+    aqulen equ 8
+    pis db 'pisces', 0  
+    pislen equ 6
+    invalzod db 'Hmm... That zodiac sign does not exist.', 0 
     
     newline db 0Dh, 0Ah, '$'
     
@@ -102,17 +102,17 @@ main proc
     push ds
     pop es
     cld 
-    get_input ber, z_ber, berlen
+    get_input ari, z_ari, arilen
     get_input tau, z_tau, taulen
     get_input gem, z_gem, gemlen
-    get_input rac, z_rac, raclen
-    get_input fec, z_fec, feclen
-    get_input bal, z_bal, ballen
+    get_input can, z_can, canlen
+    get_input vir, z_vir, virlen
+    get_input lib, z_lib, liblen
     get_input sco, z_sco, scolen
     get_input sag, z_sag, saglen
     get_input cap, z_cap, caplen
-    get_input var, z_var, varlen
-    get_input pes, z_pes, peslen 
+    get_input aqu, z_aqu, aqulen
+    get_input pis, z_pis, pislen 
     
    
     lea si, invalzod
@@ -153,7 +153,6 @@ main proc
         
        
 end main
-
 
 
 
